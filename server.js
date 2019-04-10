@@ -48,6 +48,15 @@ app.post('/login',(req,res)=>{
     }
 });
 
+app.post('/register',(req,res)=>{
+    var name=req.body.name;
+    var admno=req.body.admno;
+    var  mobno=req.body.mobno;
+
+    res.send(name+admno+mobno);
+    
+});
+
 
 
 app.listen(process.env.PORT ||3000 ,()=>{
