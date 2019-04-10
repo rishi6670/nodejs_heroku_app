@@ -40,11 +40,14 @@ app.post('/login',(req,res)=>{
 
     if(user=="admin"&&pass=="1234")
     {
-        res.send("sucess");
+        //res.send("sucess");
+        res.send(JSON.stringify({status:"sucess"}));
+        
     }
     else
     {
-        res.send("failed")
+        //res.send("failed");
+        res.send(JSON.stringify({status:"failed"})); 
     }
 });
 
